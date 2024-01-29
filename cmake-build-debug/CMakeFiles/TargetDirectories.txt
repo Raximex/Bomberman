@@ -1,0 +1,3 @@
+/home/raximex/L3/Bomberman/cmake-build-debug/CMakeFiles/Bomberman.dir
+/home/raximex/L3/Bomberman/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/raximex/L3/Bomberman/cmake-build-debug/CMakeFiles/rebuild_cache.dir
