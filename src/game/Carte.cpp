@@ -4,3 +4,7 @@
 
 #include "Carte.hpp"
 
+Carte::Carte() {
+    int Carte[10][10];
+
+}
