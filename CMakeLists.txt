@@ -5,7 +5,9 @@ set(CMAKE_CXX_STANDARD 23)
 
 add_executable(Bomberman main.cpp
         src/Graphics/Graphics.cpp
-        src/game/Carte.cpp)
+        src/game/Carte.cpp
+        src/Graphics/MainMenu.hpp
+        src/Graphics/MainMenu.cpp)
 set(SFML_STATIC_LIBRAIRIES TRUE)
 set(SFML_DIR /home/raximex/CLionProjects/SFML-2.6.1/lib/cmake/SFML)
 find_package(SFML COMPONENTS system window graphics audio network REQUIRED)

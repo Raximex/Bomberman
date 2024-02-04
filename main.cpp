@@ -1,5 +1,6 @@
 //#include "src/Graphics/Graphics.h"
 #include "main.h"
+
 #include "src/game/Carte.hpp"
 
 using namespace sf;
@@ -8,10 +9,14 @@ void inputHandlerJoueur(Event event, RenderWindow &window, Sprite &spriteJoueur)
 void loadJoueur(Texture &JoueurT, Sprite &JoueurS);
 void loadMenu(Texture &menuT, Sprite &menu);
 
+
+
 int main() {
     sf::ContextSettings settings;
     settings.antialiasingLevel = 8;
     sf::RenderWindow window(sf::VideoMode(1600, 900), "BOMBERMAN", sf::Style::Default, settings);
+    MainMenu mainMenu((float)window.getSize().x, (float)window.getSize().y);
+
     sf::Texture textureJoueur;
     sf::Texture textureMenu;
     sf::Sprite  spriteMenu;
@@ -22,6 +27,10 @@ int main() {
         Event event;
         while (window.pollEvent(event)) {
             inputHandlerJoueur(event, window, spriteJoueur);
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+                mainMenu.MoveUp();
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+                mainMenu.MoveDown();
         }
 
 
