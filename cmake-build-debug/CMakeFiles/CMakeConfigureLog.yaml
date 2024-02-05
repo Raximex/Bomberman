@@ -519,3 +519,187 @@ events:
       
       
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/raximex/CLion-2023.2.2/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "/home/raximex/CLion-2023.2.2/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindX11.cmake:682 (check_library_exists)"
+      - "cmake-build-debug/_deps/sfml-src/cmake/Macros.cmake:386 (find_package)"
+      - "cmake-build-debug/_deps/sfml-src/src/SFML/Window/CMakeLists.txt:294 (sfml_find_package)"
+    checks:
+      - "Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so"
+    directories:
+      source: "/home/raximex/L3/Bomberman/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-CwIOzz"
+      binary: "/home/raximex/L3/Bomberman/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-CwIOzz"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/raximex/L3/Bomberman/cmake-build-debug/_deps/sfml-src/cmake/Modules/;/home/raximex/L3/Bomberman/cmake-build-debug/_deps/sfml-src/cmake/Modules/"
+      CMAKE_OSX_SYSROOT: ""
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/raximex/L3/Bomberman/cmake-build-debug/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
+    buildResult:
+      variable: "X11_LIB_X11_SOLO"
+      cached: true
+      stdout: |
+        Change Dir: '/home/raximex/L3/Bomberman/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-CwIOzz'
+        
+        Run Build Command(s): /home/raximex/CLion-2023.2.2/clion-2023.2.2/bin/ninja/linux/x64/ninja -v cmTC_d4ac7
+        [1/2] /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay -o CMakeFiles/cmTC_d4ac7.dir/CheckFunctionExists.c.o -c /home/raximex/L3/Bomberman/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-CwIOzz/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=XOpenDisplay  CMakeFiles/cmTC_d4ac7.dir/CheckFunctionExists.c.o -o cmTC_d4ac7  /usr/lib/x86_64-linux-gnu/libX11.so  /usr/lib/x86_64-linux-gnu/libXext.so && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/raximex/CLion-2023.2.2/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "/home/raximex/CLion-2023.2.2/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindX11.cmake:697 (check_function_exists)"
+      - "cmake-build-debug/_deps/sfml-src/cmake/Macros.cmake:386 (find_package)"
+      - "cmake-build-debug/_deps/sfml-src/src/SFML/Window/CMakeLists.txt:294 (sfml_find_package)"
+    checks:
+      - "Looking for gethostbyname"
+    directories:
+      source: "/home/raximex/L3/Bomberman/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-EVfYjn"
+      binary: "/home/raximex/L3/Bomberman/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-EVfYjn"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/raximex/L3/Bomberman/cmake-build-debug/_deps/sfml-src/cmake/Modules/;/home/raximex/L3/Bomberman/cmake-build-debug/_deps/sfml-src/cmake/Modules/"
+      CMAKE_OSX_SYSROOT: ""
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/raximex/L3/Bomberman/cmake-build-debug/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
+    buildResult:
+      variable: "CMAKE_HAVE_GETHOSTBYNAME"
+      cached: true
+      stdout: |
+        Change Dir: '/home/raximex/L3/Bomberman/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-EVfYjn'
+        
+        Run Build Command(s): /home/raximex/CLion-2023.2.2/clion-2023.2.2/bin/ninja/linux/x64/ninja -v cmTC_35160
+        [1/2] /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname -o CMakeFiles/cmTC_35160.dir/CheckFunctionExists.c.o -c /home/raximex/L3/Bomberman/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-EVfYjn/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=gethostbyname  CMakeFiles/cmTC_35160.dir/CheckFunctionExists.c.o -o cmTC_35160   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/raximex/CLion-2023.2.2/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "/home/raximex/CLion-2023.2.2/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindX11.cmake:711 (check_function_exists)"
+      - "cmake-build-debug/_deps/sfml-src/cmake/Macros.cmake:386 (find_package)"
+      - "cmake-build-debug/_deps/sfml-src/src/SFML/Window/CMakeLists.txt:294 (sfml_find_package)"
+    checks:
+      - "Looking for connect"
+    directories:
+      source: "/home/raximex/L3/Bomberman/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1NNBXQ"
+      binary: "/home/raximex/L3/Bomberman/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1NNBXQ"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/raximex/L3/Bomberman/cmake-build-debug/_deps/sfml-src/cmake/Modules/;/home/raximex/L3/Bomberman/cmake-build-debug/_deps/sfml-src/cmake/Modules/"
+      CMAKE_OSX_SYSROOT: ""
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/raximex/L3/Bomberman/cmake-build-debug/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
+    buildResult:
+      variable: "CMAKE_HAVE_CONNECT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/raximex/L3/Bomberman/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1NNBXQ'
+        
+        Run Build Command(s): /home/raximex/CLion-2023.2.2/clion-2023.2.2/bin/ninja/linux/x64/ninja -v cmTC_d8e4e
+        [1/2] /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect -o CMakeFiles/cmTC_d8e4e.dir/CheckFunctionExists.c.o -c /home/raximex/L3/Bomberman/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1NNBXQ/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=connect  CMakeFiles/cmTC_d8e4e.dir/CheckFunctionExists.c.o -o cmTC_d8e4e   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/raximex/CLion-2023.2.2/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "/home/raximex/CLion-2023.2.2/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindX11.cmake:720 (check_function_exists)"
+      - "cmake-build-debug/_deps/sfml-src/cmake/Macros.cmake:386 (find_package)"
+      - "cmake-build-debug/_deps/sfml-src/src/SFML/Window/CMakeLists.txt:294 (sfml_find_package)"
+    checks:
+      - "Looking for remove"
+    directories:
+      source: "/home/raximex/L3/Bomberman/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-fhNDoc"
+      binary: "/home/raximex/L3/Bomberman/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-fhNDoc"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/raximex/L3/Bomberman/cmake-build-debug/_deps/sfml-src/cmake/Modules/;/home/raximex/L3/Bomberman/cmake-build-debug/_deps/sfml-src/cmake/Modules/"
+      CMAKE_OSX_SYSROOT: ""
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/raximex/L3/Bomberman/cmake-build-debug/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
+    buildResult:
+      variable: "CMAKE_HAVE_REMOVE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/raximex/L3/Bomberman/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-fhNDoc'
+        
+        Run Build Command(s): /home/raximex/CLion-2023.2.2/clion-2023.2.2/bin/ninja/linux/x64/ninja -v cmTC_56751
+        [1/2] /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove -o CMakeFiles/cmTC_56751.dir/CheckFunctionExists.c.o -c /home/raximex/L3/Bomberman/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-fhNDoc/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=remove  CMakeFiles/cmTC_56751.dir/CheckFunctionExists.c.o -o cmTC_56751   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/raximex/CLion-2023.2.2/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "/home/raximex/CLion-2023.2.2/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindX11.cmake:729 (check_function_exists)"
+      - "cmake-build-debug/_deps/sfml-src/cmake/Macros.cmake:386 (find_package)"
+      - "cmake-build-debug/_deps/sfml-src/src/SFML/Window/CMakeLists.txt:294 (sfml_find_package)"
+    checks:
+      - "Looking for shmat"
+    directories:
+      source: "/home/raximex/L3/Bomberman/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-AOYu2b"
+      binary: "/home/raximex/L3/Bomberman/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-AOYu2b"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/raximex/L3/Bomberman/cmake-build-debug/_deps/sfml-src/cmake/Modules/;/home/raximex/L3/Bomberman/cmake-build-debug/_deps/sfml-src/cmake/Modules/"
+      CMAKE_OSX_SYSROOT: ""
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/raximex/L3/Bomberman/cmake-build-debug/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
+    buildResult:
+      variable: "CMAKE_HAVE_SHMAT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/raximex/L3/Bomberman/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-AOYu2b'
+        
+        Run Build Command(s): /home/raximex/CLion-2023.2.2/clion-2023.2.2/bin/ninja/linux/x64/ninja -v cmTC_d36d6
+        [1/2] /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat -o CMakeFiles/cmTC_d36d6.dir/CheckFunctionExists.c.o -c /home/raximex/L3/Bomberman/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-AOYu2b/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=shmat  CMakeFiles/cmTC_d36d6.dir/CheckFunctionExists.c.o -o cmTC_d36d6   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/raximex/CLion-2023.2.2/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "/home/raximex/CLion-2023.2.2/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindX11.cmake:739 (check_library_exists)"
+      - "cmake-build-debug/_deps/sfml-src/cmake/Macros.cmake:386 (find_package)"
+      - "cmake-build-debug/_deps/sfml-src/src/SFML/Window/CMakeLists.txt:294 (sfml_find_package)"
+    checks:
+      - "Looking for IceConnectionNumber in ICE"
+    directories:
+      source: "/home/raximex/L3/Bomberman/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vH4TSN"
+      binary: "/home/raximex/L3/Bomberman/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vH4TSN"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/raximex/L3/Bomberman/cmake-build-debug/_deps/sfml-src/cmake/Modules/;/home/raximex/L3/Bomberman/cmake-build-debug/_deps/sfml-src/cmake/Modules/"
+      CMAKE_OSX_SYSROOT: ""
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/raximex/L3/Bomberman/cmake-build-debug/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
+    buildResult:
+      variable: "CMAKE_LIB_ICE_HAS_ICECONNECTIONNUMBER"
+      cached: true
+      stdout: |
+        Change Dir: '/home/raximex/L3/Bomberman/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vH4TSN'
+        
+        Run Build Command(s): /home/raximex/CLion-2023.2.2/clion-2023.2.2/bin/ninja/linux/x64/ninja -v cmTC_4c729
+        [1/2] /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber -o CMakeFiles/cmTC_4c729.dir/CheckFunctionExists.c.o -c /home/raximex/L3/Bomberman/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vH4TSN/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=IceConnectionNumber  CMakeFiles/cmTC_4c729.dir/CheckFunctionExists.c.o -o cmTC_4c729  -lICE && :
+        
+      exitCode: 0
+...

@@ -3,3 +3,4 @@
 -- Configuring done (0.0s)
 -- Generating done (0.0s)
 -- Build files have been written to: /home/raximex/L3/Bomberman/cmake-build-debug
+CMake File API: /home/raximex/L3/Bomberman/cmake-build-debug: failed to load from '/home/raximex/L3/Bomberman/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-8534c76e5a511c20d701.json'

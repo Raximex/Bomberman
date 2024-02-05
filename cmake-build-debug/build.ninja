@@ -63,6 +63,20 @@ build CMakeFiles/Bomberman.dir/src/Graphics/Graphics.cpp.o: CXX_COMPILER__Bomber
   OBJECT_DIR = CMakeFiles/Bomberman.dir
   OBJECT_FILE_DIR = CMakeFiles/Bomberman.dir/src/Graphics
 
+build CMakeFiles/Bomberman.dir/src/game/Carte.cpp.o: CXX_COMPILER__Bomberman_unscanned_Debug /home/raximex/L3/Bomberman/src/game/Carte.cpp || cmake_object_order_depends_target_Bomberman
+  DEP_FILE = CMakeFiles/Bomberman.dir/src/game/Carte.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I/home/raximex/CLionProjects/SFML-2.6.1/include/SFML -isystem /home/raximex/CLionProjects/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles/Bomberman.dir
+  OBJECT_FILE_DIR = CMakeFiles/Bomberman.dir/src/game
+
+build CMakeFiles/Bomberman.dir/src/Graphics/MainMenu.cpp.o: CXX_COMPILER__Bomberman_unscanned_Debug /home/raximex/L3/Bomberman/src/Graphics/MainMenu.cpp || cmake_object_order_depends_target_Bomberman
+  DEP_FILE = CMakeFiles/Bomberman.dir/src/Graphics/MainMenu.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I/home/raximex/CLionProjects/SFML-2.6.1/include/SFML -isystem /home/raximex/CLionProjects/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles/Bomberman.dir
+  OBJECT_FILE_DIR = CMakeFiles/Bomberman.dir/src/Graphics
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Bomberman
@@ -71,7 +85,7 @@ build CMakeFiles/Bomberman.dir/src/Graphics/Graphics.cpp.o: CXX_COMPILER__Bomber
 #############################################
 # Link the executable Bomberman
 
-build Bomberman: CXX_EXECUTABLE_LINKER__Bomberman_Debug CMakeFiles/Bomberman.dir/main.cpp.o CMakeFiles/Bomberman.dir/src/Graphics/Graphics.cpp.o | /home/raximex/CLionProjects/SFML-2.6.1/bin/sfml-audio-d-2.dll /home/raximex/CLionProjects/SFML-2.6.1/bin/sfml-graphics-d-2.dll /home/raximex/CLionProjects/SFML-2.6.1/bin/sfml-window-d-2.dll /home/raximex/CLionProjects/SFML-2.6.1/bin/sfml-system-d-2.dll
+build Bomberman: CXX_EXECUTABLE_LINKER__Bomberman_Debug CMakeFiles/Bomberman.dir/main.cpp.o CMakeFiles/Bomberman.dir/src/Graphics/Graphics.cpp.o CMakeFiles/Bomberman.dir/src/game/Carte.cpp.o CMakeFiles/Bomberman.dir/src/Graphics/MainMenu.cpp.o | /home/raximex/CLionProjects/SFML-2.6.1/bin/sfml-audio-d-2.dll /home/raximex/CLionProjects/SFML-2.6.1/bin/sfml-graphics-d-2.dll /home/raximex/CLionProjects/SFML-2.6.1/bin/sfml-window-d-2.dll /home/raximex/CLionProjects/SFML-2.6.1/bin/sfml-system-d-2.dll
   FLAGS = -g
   LINK_LIBRARIES = -Wl,-rpath,/home/raximex/CLionProjects/SFML-2.6.1/bin  /home/raximex/CLionProjects/SFML-2.6.1/bin/sfml-audio-d-2.dll  /home/raximex/CLionProjects/SFML-2.6.1/bin/sfml-graphics-d-2.dll  /home/raximex/CLionProjects/SFML-2.6.1/bin/sfml-window-d-2.dll  /home/raximex/CLionProjects/SFML-2.6.1/bin/sfml-system-d-2.dll
   OBJECT_DIR = CMakeFiles/Bomberman.dir
@@ -79,6 +93,30 @@ build Bomberman: CXX_EXECUTABLE_LINKER__Bomberman_Debug CMakeFiles/Bomberman.dir
   PRE_LINK = :
   TARGET_FILE = Bomberman
   TARGET_PDB = Bomberman.dbg
+
+
+#############################################
+# Utility command for package
+
+build CMakeFiles/package.util: CUSTOM_COMMAND all
+  COMMAND = cd /home/raximex/L3/Bomberman/cmake-build-debug && /home/raximex/CLion-2023.2.2/clion-2023.2.2/bin/cmake/linux/x64/bin/cpack --config ./CPackConfig.cmake
+  DESC = Run CPack packaging tool...
+  pool = console
+  restat = 1
+
+build package: phony CMakeFiles/package.util
+
+
+#############################################
+# Utility command for package_source
+
+build CMakeFiles/package_source.util: CUSTOM_COMMAND
+  COMMAND = cd /home/raximex/L3/Bomberman/cmake-build-debug && /home/raximex/CLion-2023.2.2/clion-2023.2.2/bin/cmake/linux/x64/bin/cpack --config ./CPackSourceConfig.cmake /home/raximex/L3/Bomberman/cmake-build-debug/CPackSourceConfig.cmake
+  DESC = Run CPack packaging tool for source...
+  pool = console
+  restat = 1
+
+build package_source: phony CMakeFiles/package_source.util
 
 
 #############################################
