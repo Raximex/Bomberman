@@ -8,11 +8,15 @@
 
 #pragma once
 #include <SFML/Graphics.hpp>
+using namespace sf;
 
 class Graphics {
 public:
-    Graphics();
+    Graphics(Texture texture, Sprite sprite);
     void run();
+    void loadJoueur(Texture &texture, Sprite &sprite);
+    void loadMenu(Texture &texture, Sprite &sprite);
+
 };
 
 
