@@ -37,6 +37,7 @@ int main() {
         window.clear();
         window.draw(spriteJoueur);
         window.draw(spriteMenu);
+        mainMenu.draw(window);
         window.display();
     }
 }

@@ -96,6 +96,30 @@ build Bomberman: CXX_EXECUTABLE_LINKER__Bomberman_Debug CMakeFiles/Bomberman.dir
 
 
 #############################################
+# Utility command for package
+
+build CMakeFiles/package.util: CUSTOM_COMMAND all
+  COMMAND = cd /home/raximex/L3/Bomberman/cmake-build-debug && /home/raximex/CLion-2023.2.2/clion-2023.2.2/bin/cmake/linux/x64/bin/cpack --config ./CPackConfig.cmake
+  DESC = Run CPack packaging tool...
+  pool = console
+  restat = 1
+
+build package: phony CMakeFiles/package.util
+
+
+#############################################
+# Utility command for package_source
+
+build CMakeFiles/package_source.util: CUSTOM_COMMAND
+  COMMAND = cd /home/raximex/L3/Bomberman/cmake-build-debug && /home/raximex/CLion-2023.2.2/clion-2023.2.2/bin/cmake/linux/x64/bin/cpack --config ./CPackSourceConfig.cmake /home/raximex/L3/Bomberman/cmake-build-debug/CPackSourceConfig.cmake
+  DESC = Run CPack packaging tool for source...
+  pool = console
+  restat = 1
+
+build package_source: phony CMakeFiles/package_source.util
+
+
+#############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
