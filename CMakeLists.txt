@@ -1,14 +1,25 @@
-cmake_minimum_required(VERSION 3.27)
-project(Bomberman)
+cmake_minimum_required(VERSION 3.16)
+project(Bomberman LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
 
-add_executable(Bomberman main.cpp
-        src/Graphics/Graphics.cpp)
-set(SFML_STATIC_LIBRAIRIES TRUE)
-set(SFML_DIR /home/raximex/CLionProjects/SFML-2.6.1/lib/cmake/SFML)
-find_package(SFML COMPONENTS system window graphics audio network REQUIRED)
+include(FetchContent)
+FetchContent_Declare(SFML
+    GIT_REPOSITORY https://github.com/SFML/SFML.git
+    GIT_TAG 2.6.x)
+FetchContent_MakeAvailable(SFML)
 
-include_directories(/home/raximex/CLionProjects/SFML-2.6.1/include/SFML)
+add_executable(Bomberman main.cpp)
+target_link_libraries(Bomberman PRIVATE sfml-graphics sfml-window)
+target_compile_features(Bomberman PRIVATE cxx_std_17)
 
-target_link_libraries(Bomberman sfml-system sfml-window sfml-audio sfml-graphics)
+if(WIN32)
+    add_custom_command(
+        TARGET Bomberman
+        COMMENT "Copy OpenAL DLL"
+        PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${SFML_SOURCE_DIR}/extlibs/bin/$<IF:$<EQUAL:${CMAKE_SIZEOF_VOID_P},8>,x64,x86>/openal32.dll $<TARGET_FILE_DIR:Bomberman>
+        VERBATIM)
+endif()
+
+install(TARGETS Bomberman)
