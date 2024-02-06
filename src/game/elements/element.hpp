@@ -7,7 +7,6 @@ class Element
 {
     protected : 
     bool destructible, traversable;
-    sf::Vector2f position; 
     sf::Texture texture;
     sf::Sprite sprite; 
     

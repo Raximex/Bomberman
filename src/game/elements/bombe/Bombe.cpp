@@ -3,7 +3,7 @@
 //
 
 #include "Bombe.hpp"
-
+#include <iostream>
 #include "../personnage/Personnage.hpp"
 
 Bombe::Bombe( Personnage& proprietaire) : proprietaire(proprietaire)
@@ -19,7 +19,7 @@ Bombe::Bombe( Personnage& proprietaire) : proprietaire(proprietaire)
 
 void Bombe::poser(sf::RenderWindow &window)
 {
-    setPosition(proprietaire.getPosition().x + 40, proprietaire.getPosition().y + 100); //TODO: Il faut ensuite set l'objet sur la carte pour qu'il y reste
+    setPosition(proprietaire.getPosition().x, proprietaire.getPosition().y); //TODO: Il faut ensuite set l'objet sur la carte pour qu'il y reste
     window.draw(sprite);
  
 }

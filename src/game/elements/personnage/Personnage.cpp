@@ -22,3 +22,4 @@ Bombe& Personnage::getBombe()
 {
     return bombe;
 }
+

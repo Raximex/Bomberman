@@ -25,6 +25,7 @@ public :
     Personnage() = delete;
     Personnage(apparence apparence); //TODO: définir init pos au chargement de la map
     Bombe& getBombe();
+
 };
 
 

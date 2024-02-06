@@ -21,16 +21,16 @@ int Element::loadElement(std::string fichier){
 void Element::setPosition(int x, int y)
 {
     sprite.setPosition(x,y);
-    position = sprite.getPosition();
+    
 }
 
 void Element::setPosition(sf::Vector2f nouvellePosition)
 {
     sprite.setPosition(nouvellePosition);
-    position = sprite.getPosition();
+  
 }
 sf::Vector2f Element::getPosition(){
-    return position;
+    return sprite.getPosition();
 }
 
 sf::Sprite& Element::getSprite() {
