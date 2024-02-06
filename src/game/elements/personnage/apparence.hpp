@@ -1,0 +1,4 @@
+enum apparence{
+    titi,
+    toto
+};

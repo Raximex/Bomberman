@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.27)
 project(Bomberman LANGUAGES CXX)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
@@ -10,7 +10,12 @@ FetchContent_Declare(SFML
     GIT_TAG 2.6.x)
 FetchContent_MakeAvailable(SFML)
 
-add_executable(Bomberman main.cpp)
+add_executable(Bomberman main.cpp 
+                         src/Graphics/Graphics.cpp 
+                         src/game/elements/element.cpp
+                         src/game/elements/personnage/Personnage.cpp
+                         src/game/elements/bombe/Bombe.cpp
+                         )
 target_link_libraries(Bomberman PRIVATE sfml-graphics sfml-window)
 target_compile_features(Bomberman PRIVATE cxx_std_17)
 

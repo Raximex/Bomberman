@@ -4,7 +4,7 @@
 #define BOMBERMAN_MAIN_H
 #include <iostream>
 #include <SFML/Graphics.hpp>
-#include "src/Graphics/MainMenu.h"
+#include "src/game/elements/personnage/Personnage.hpp"
 
 
 #endif //BOMBERMAN_MAIN_H

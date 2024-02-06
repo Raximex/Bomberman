@@ -5,7 +5,7 @@
 
 using namespace sf;
 
-void inputHandlerJoueur(Event event, RenderWindow &window, Sprite &spriteJoueur);
+void inputHandlerJoueur(Event event, RenderWindow &window, Personnage& perso);
 void loadJoueur(Texture &JoueurT, Sprite &JoueurS);
 
 
@@ -15,50 +15,50 @@ int main() {
     ContextSettings settings;
     settings.antialiasingLevel = 8;
     RenderWindow window(sf::VideoMode(1600, 900), "BOMBERMAN", sf::Style::Default, settings);
-    MainMenu mainMenu((float)window.getSize().x, (float)window.getSize().y);
-    Texture textureJoueur, textureMenu;
-    Sprite spriteMenu, spriteJoueur;
-    Graphics graphicsJoueur(textureJoueur,spriteJoueur);
-    Graphics graphicsMenu(textureMenu,spriteMenu);
-    //graphicsJoueur.loadJoueur(textureJoueur,spriteJoueur);
-    graphicsMenu.loadMenu(textureMenu,spriteMenu);
+    
+    Personnage perso1(titi);
+
     while (window.isOpen()) {
         Event event;
         while (window.pollEvent(event)) {
-            inputHandlerJoueur(event, window, spriteJoueur);
-            if(Keyboard::isKeyPressed(Keyboard::Up))//Gestion du menu
-                mainMenu.MoveUp();
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-                mainMenu.MoveDown();
+            if(event.type == sf::Event::Closed) window.close();
+           /* if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)){
+                perso1.getBombe().poser(window);
+            }*/
+
+            inputHandlerJoueur(event,window,perso1);
+            
         }
 
 
         window.clear();
-        window.draw(spriteJoueur);
-        window.draw(spriteMenu);
-        mainMenu.draw(window);//affichage du texte grace a la fonction draw
+        window.draw(perso1.getSprite());
+        window.draw(perso1.getBombe().getSprite());
         window.display();
     }
 }
 
-void inputHandlerJoueur(Event event, RenderWindow &window, Sprite &spriteJoueur)
+void inputHandlerJoueur(Event event, RenderWindow &window, Personnage &perso)
 {
     if(event.type == sf::Event::Closed){
         window.close();
     }
-    sf::Vector2f  position = spriteJoueur.getPosition();
+    sf::Vector2f  position = perso.getPosition();
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::D))
-     spriteJoueur.setPosition(position+sf::Vector2f (1,0));
+     perso.getSprite().move(sf::Vector2f (1,0));
 
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Z))
-        spriteJoueur.setPosition(position+sf::Vector2f (0,-1));
+        perso.getSprite().move(sf::Vector2f (0,-1));
 
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::S))
-        spriteJoueur.setPosition(position+sf::Vector2f (0,1));
+        perso.getSprite().move(sf::Vector2f (0,1));
 
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Q))
-        spriteJoueur.setPosition(position+sf::Vector2f (-1,0));
-    if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){}
+        perso.getSprite().move(sf::Vector2f (-1,0));
+
+    if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
+        perso.getBombe().poser(window);
+    
         //lancer la bombe sur la carte
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::End)){}
         //ouvrir la page de paramètres
