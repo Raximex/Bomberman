@@ -24,6 +24,12 @@ void Element::setPosition(int x, int y)
     
 }
 
+void Element::deplacer(sf::Vector2f position)
+{
+    sprite.move(position);
+    
+}
+
 void Element::setPosition(sf::Vector2f nouvellePosition)
 {
     sprite.setPosition(nouvellePosition);

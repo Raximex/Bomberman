@@ -22,9 +22,6 @@ int main() {
         Event event;
         while (window.pollEvent(event)) {
             if(event.type == sf::Event::Closed) window.close();
-           /* if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)){
-                perso1.getBombe().poser(window);
-            }*/
 
             inputHandlerJoueur(event,window,perso1);
             
@@ -45,13 +42,13 @@ void inputHandlerJoueur(Event event, RenderWindow &window, Personnage &perso)
     }
     sf::Vector2f  position = perso.getPosition();
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::D))
-     perso.getSprite().move(sf::Vector2f (1,0));
+     perso.deplacer(sf::Vector2f (1,0));
 
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Z))
-        perso.getSprite().move(sf::Vector2f (0,-1));
+        perso.deplacer(sf::Vector2f (0,-1));
 
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::S))
-        perso.getSprite().move(sf::Vector2f (0,1));
+        perso.deplacer(sf::Vector2f (0,1));
 
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Q))
         perso.getSprite().move(sf::Vector2f (-1,0));

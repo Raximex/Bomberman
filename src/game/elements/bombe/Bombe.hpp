@@ -7,7 +7,7 @@
 
 #include "../element.hpp"
 
-class Personnage; 
+class Personnage; //! forward declaration, évite problème d'inclusion
 
 class Bombe : public Element
 {
@@ -16,12 +16,17 @@ private :
     int porteAttaque = 1;
     int delaiExplosion = 3; //TODO utiliser heure depart, heure fin pour calcul    
     Personnage & proprietaire;
+    sf::Texture textureFlamme;
+    sf::Sprite spriteFlamme; 
+    sf::VertexArray flammes(sf::Sprite, int);
+    
 public : 
     Bombe() = delete ; 
     Bombe( Personnage& proprietaire);
     void poser(sf::RenderWindow &window);
     void exploser();
     void ajoutPowerUp(); //TODO: ajouter un powerup en param
+    int loadSpriteFlammes(std::string);
 };
 
 
