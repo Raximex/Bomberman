@@ -1,7 +1,7 @@
 //#include "src/Graphics/Graphics.h"
 #include "main.h"
 #include "src/Graphics/Graphics.h"
-#include "src/game/Carte.hpp"
+#include "src/game/Carte.cpp"
 
 using namespace sf;
 
@@ -20,6 +20,29 @@ int main() {
     Sprite spriteMenu, spriteJoueur;
     Graphics graphicsJoueur(textureJoueur,spriteJoueur);
     Graphics graphicsMenu(textureMenu,spriteMenu);
+    Carte map;
+    const int level[] =
+            {
+                    0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+                    0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 2, 0, 0, 0, 0,
+                    1, 1, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3,
+                    0, 1, 0, 0, 2, 0, 3, 3, 3, 0, 1, 1, 1, 0, 0, 0,
+                    0, 1, 0, 0, 2, 0, 3, 3, 3, 0, 1, 1, 1, 0, 0, 0,
+                    0, 1, 0, 0, 2, 0, 3, 3, 3, 0, 1, 1, 1, 0, 0, 0,
+                    0, 1, 0, 0, 2, 0, 3, 3, 3, 0, 1, 1, 1, 0, 0, 0,
+                    0, 1, 0, 0, 2, 0, 3, 3, 3, 0, 1, 1, 1, 0, 0, 0,
+                    0, 1, 0, 0, 2, 0, 3, 3, 3, 0, 1, 1, 1, 0, 0, 0,
+                    0, 1, 0, 0, 2, 0, 3, 3, 3, 0, 1, 1, 1, 0, 0, 0,
+                    0, 1, 0, 0, 2, 0, 3, 3, 3, 0, 1, 1, 1, 0, 0, 0,
+                    0, 1, 0, 0, 2, 0, 3, 3, 3, 0, 1, 1, 1, 0, 0, 0,
+                    0, 1, 1, 0, 3, 3, 3, 0, 0, 0, 1, 1, 1, 2, 0, 0,
+                    0, 0, 1, 0, 3, 0, 2, 2, 0, 0, 1, 1, 1, 1, 2, 0,
+                    2, 0, 1, 0, 3, 0, 2, 2, 2, 0, 1, 1, 1, 1, 1, 1,
+                    0, 0, 1, 0, 3, 2, 2, 2, 0, 0, 0, 0, 1, 1, 1, 1,
+            };
+
+    if(!map.load("assets/grass.png", sf::Vector2u(32, 32), level, 16, 8))
+        return -1;
     //graphicsJoueur.loadJoueur(textureJoueur,spriteJoueur);
     graphicsMenu.loadMenu(textureMenu,spriteMenu);
     while (window.isOpen()) {
@@ -36,10 +59,24 @@ int main() {
         window.clear();
         window.draw(spriteJoueur);
         window.draw(spriteMenu);
+        window.draw(map);
         mainMenu.draw(window);//affichage du texte grace a la fonction draw
         window.display();
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 void inputHandlerJoueur(Event event, RenderWindow &window, Sprite &spriteJoueur)
 {
