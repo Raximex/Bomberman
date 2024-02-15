@@ -6,7 +6,7 @@
 #define BOMBERMAN_BOMBE_H
 
 #include "../element.hpp"
-
+#include <thread>
 class Personnage; //! forward declaration, évite problème d'inclusion
 
 class Bombe : public Element
@@ -19,14 +19,18 @@ private :
     sf::Texture textureFlamme;
     sf::Sprite spriteFlamme; 
     sf::VertexArray flammes(sf::Sprite, int);
+    sf::Texture textureBombe;
+    sf::Sprite sprtieBombe; 
     
 public : 
     Bombe() = delete ; 
     Bombe( Personnage& proprietaire);
     void poser(sf::RenderWindow &window);
-    void exploser();
+   // void Bombe::exploser(sf::RenderWindow &window);
     void ajoutPowerUp(); //TODO: ajouter un powerup en param
     int loadSpriteFlammes(std::string);
+    int loadBombe(std::string);
+
 };
 
 

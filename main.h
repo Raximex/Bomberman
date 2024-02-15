@@ -4,6 +4,7 @@
 #define BOMBERMAN_MAIN_H
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include <thread>
 #include "src/game/elements/personnage/Personnage.hpp"
 
 

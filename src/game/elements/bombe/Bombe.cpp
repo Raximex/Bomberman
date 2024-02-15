@@ -8,7 +8,7 @@
 
 Bombe::Bombe( Personnage& proprietaire) : proprietaire(proprietaire)
 {
-    if(!loadElement("C:/Users/cedri/OneDrive/Documents/GitHub/Bomberman/assets/Bomberman(1).png")){
+    if(!loadBombe("C:/Users/cedri/OneDrive/Documents/GitHub/Bomberman/assets/bombes.png")){
         return;
     }
 
@@ -16,7 +16,6 @@ Bombe::Bombe( Personnage& proprietaire) : proprietaire(proprietaire)
         return;
     }
   
-    flammes(spriteFlamme,porteAttaque* 4);
     
     destructible = false;
     traversable = true;
@@ -24,19 +23,26 @@ Bombe::Bombe( Personnage& proprietaire) : proprietaire(proprietaire)
     
 }
 
+int Bombe::loadBombe(std::string lien){
+    textureBombe.loadFromFile(lien);
+    sprtieBombe.setTexture(textureBombe);
+    sprtieBombe.setTextureRect(sf::IntRect(0,48,16,16));
+    return 1;
+}
+
 void Bombe::poser(sf::RenderWindow &window)
 {
     setPosition(proprietaire.getPosition().x, proprietaire.getPosition().y); //TODO: Il faut ensuite set l'objet sur la carte pour qu'il y reste
-    window.draw(sprite);
- 
-}
-
-void Bombe::exploser(){
-    for(int i = 0; i < porteAttaque * 4; i++){
-      
+    sf::Clock clock;
+    while(clock.getElapsedTime().asSeconds() < 3){
+        window.clear();
+        window.draw(sprtieBombe);
+        window.display();
     }
-
+    clock.restart();
 }
+
+//void Bombe::exploser(sf::RenderWindow &window){}
 
 int Bombe::loadSpriteFlammes(std::string fichier){
     if (textureFlamme.loadFromFile(fichier)) {
@@ -49,3 +55,4 @@ int Bombe::loadSpriteFlammes(std::string fichier){
         return 0;
     }
 }
+

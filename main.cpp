@@ -30,7 +30,7 @@ int main() {
 
         window.clear();
         window.draw(perso1.getSprite());
-        window.draw(perso1.getBombe().getSprite());
+       // window.draw(perso1.getBombe().getSprite());
         window.display();
     }
 }
@@ -53,8 +53,14 @@ void inputHandlerJoueur(Event event, RenderWindow &window, Personnage &perso)
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Q))
         perso.getSprite().move(sf::Vector2f (-1,0));
 
-    if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
+    if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+    std::thread poser([&perso, &window](){
         perso.getBombe().poser(window);
+    }) ;
+
+    poser.join();
+   
+    }
     
         //lancer la bombe sur la carte
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::End)){}
