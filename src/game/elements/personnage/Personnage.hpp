@@ -19,9 +19,11 @@ private :
     int bouclier = 0;
     int viesRestantes = 3;
 
+    enum Dir{Down, Left, Up, Right};
     Bombe bombe;
 
 public : 
+    sf::Vector2i anim;
     Personnage() = delete;
     Personnage(apparence apparence); //TODO: définir init pos au chargement de la map
     Bombe& getBombe();

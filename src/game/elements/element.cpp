@@ -42,3 +42,7 @@ sf::Vector2f Element::getPosition(){
 sf::Sprite& Element::getSprite() {
     return sprite;
 }
+
+sf::Texture& Element::getTexture(){
+    return texture;
+}

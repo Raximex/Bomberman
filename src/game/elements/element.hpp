@@ -20,7 +20,7 @@ class Element
 
     int loadElement(std::string); //TODO: Ajouter un rect en param pour gerer les différents sprite
     sf::Sprite&  getSprite();
-
+    sf::Texture& getTexture();
     
 
 };

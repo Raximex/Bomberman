@@ -5,11 +5,12 @@
 #include "Personnage.hpp"
 
 
-Personnage::Personnage(apparence apparence) : skin(apparence), bombe(*this)
+Personnage::Personnage(apparence apparence) : skin(apparence), bombe(*this), anim(1,Down)
 {
    
     if(skin == apparence::titi){
-        loadElement("C:/Users/cedri/OneDrive/Documents/GitHub/Bomberman/assets/Bomberman(1).png");
+        texture.loadFromFile("C:/Users/cedri/Documents/GitHub/Bomberman/assets/perso1.png");
+        sprite.setTexture(texture);
         nom = titi;
         setPosition(100,200);  
     } 
