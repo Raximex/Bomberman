@@ -77,6 +77,13 @@ build CMakeFiles/Bomberman.dir/src/Graphics/MainMenu.cpp.o: CXX_COMPILER__Bomber
   OBJECT_DIR = CMakeFiles/Bomberman.dir
   OBJECT_FILE_DIR = CMakeFiles/Bomberman.dir/src/Graphics
 
+build CMakeFiles/Bomberman.dir/src/game/Animation.cpp.o: CXX_COMPILER__Bomberman_unscanned_Debug /home/raximex/L3/Bomberman/src/game/Animation.cpp || cmake_object_order_depends_target_Bomberman
+  DEP_FILE = CMakeFiles/Bomberman.dir/src/game/Animation.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I/home/raximex/CLionProjects/SFML-2.6.1/include/SFML -isystem /home/raximex/CLionProjects/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles/Bomberman.dir
+  OBJECT_FILE_DIR = CMakeFiles/Bomberman.dir/src/game
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Bomberman
@@ -85,7 +92,7 @@ build CMakeFiles/Bomberman.dir/src/Graphics/MainMenu.cpp.o: CXX_COMPILER__Bomber
 #############################################
 # Link the executable Bomberman
 
-build Bomberman: CXX_EXECUTABLE_LINKER__Bomberman_Debug CMakeFiles/Bomberman.dir/main.cpp.o CMakeFiles/Bomberman.dir/src/Graphics/Graphics.cpp.o CMakeFiles/Bomberman.dir/src/game/Carte.cpp.o CMakeFiles/Bomberman.dir/src/Graphics/MainMenu.cpp.o | /home/raximex/CLionProjects/SFML-2.6.1/bin/sfml-audio-d-2.dll /home/raximex/CLionProjects/SFML-2.6.1/bin/sfml-graphics-d-2.dll /home/raximex/CLionProjects/SFML-2.6.1/bin/sfml-window-d-2.dll /home/raximex/CLionProjects/SFML-2.6.1/bin/sfml-system-d-2.dll
+build Bomberman: CXX_EXECUTABLE_LINKER__Bomberman_Debug CMakeFiles/Bomberman.dir/main.cpp.o CMakeFiles/Bomberman.dir/src/Graphics/Graphics.cpp.o CMakeFiles/Bomberman.dir/src/game/Carte.cpp.o CMakeFiles/Bomberman.dir/src/Graphics/MainMenu.cpp.o CMakeFiles/Bomberman.dir/src/game/Animation.cpp.o | /home/raximex/CLionProjects/SFML-2.6.1/bin/sfml-audio-d-2.dll /home/raximex/CLionProjects/SFML-2.6.1/bin/sfml-graphics-d-2.dll /home/raximex/CLionProjects/SFML-2.6.1/bin/sfml-window-d-2.dll /home/raximex/CLionProjects/SFML-2.6.1/bin/sfml-system-d-2.dll
   FLAGS = -g
   LINK_LIBRARIES = -Wl,-rpath,/home/raximex/CLionProjects/SFML-2.6.1/bin  /home/raximex/CLionProjects/SFML-2.6.1/bin/sfml-audio-d-2.dll  /home/raximex/CLionProjects/SFML-2.6.1/bin/sfml-graphics-d-2.dll  /home/raximex/CLionProjects/SFML-2.6.1/bin/sfml-window-d-2.dll  /home/raximex/CLionProjects/SFML-2.6.1/bin/sfml-system-d-2.dll
   OBJECT_DIR = CMakeFiles/Bomberman.dir

@@ -8,7 +8,7 @@ Graphics::Graphics(Texture texture, Sprite sprite) {
 }
 void Graphics::loadJoueur(Texture &texture, Sprite &sprite)
 {
-    if (texture.loadFromFile("assets/Bomberman(1).png")) {
+    if (texture.loadFromFile("assets/Bomberman.png")) {
         std::cout << "Image chargée" << std::endl;
         sprite.setTexture(texture);
         sprite.setTextureRect(sf::IntRect(0, 65, 16, 26));

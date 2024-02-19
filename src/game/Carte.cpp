@@ -11,7 +11,7 @@ class Carte : public sf::Drawable, public sf::Transformable
         if (!m_tileset.loadFromFile(tileset))
             return false;
         m_vertices.setPrimitiveType(sf::Quads);
-        m_vertices.resize(width * height * 4);
+        m_vertices.resize(width * height * 5);
 
         // on remplit le tableau de vertex, avec un quad par tuile
         for (unsigned int i = 0; i < width; ++i)

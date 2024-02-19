@@ -10,7 +10,9 @@ add_executable(Bomberman main.cpp
         src/Graphics/MainMenu.h
         src/Graphics/MainMenu.cpp
         src/Graphics/Graphics.cpp
-        src/game/Carte.cpp)
+        src/game/Carte.cpp
+        src/game/Animation.h
+        src/game/Animation.cpp)
 set(SFML_STATIC_LIBRAIRIES TRUE)
 set(SFML_DIR /home/raximex/CLionProjects/SFML-2.6.1/lib/cmake/SFML)
 find_package(SFML COMPONENTS system window graphics audio network REQUIRED)
